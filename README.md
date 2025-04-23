@@ -34,31 +34,9 @@ Interactive personal portfolio website built with Next.js and Framer Motion, fea
 
 ## Deployment Instructions for priyanshu.id
 
-### 1. Deploy to Vercel
+### Configure Custom Domain
 
-**Option 1: Deploy from GitHub**
-1. Push your code to a GitHub repository
-2. Sign up for a [Vercel account](https://vercel.com/signup)
-3. Import your GitHub repository in Vercel
-4. Vercel will automatically detect Next.js and deploy your site
-
-**Option 2: Deploy from CLI**
-1. Install the Vercel CLI:
-   ```bash
-   npm i -g vercel
-   ```
-2. Login to Vercel:
-   ```bash
-   vercel login
-   ```
-3. Deploy the project:
-   ```bash
-   vercel --prod
-   ```
-
-### 2. Configure Custom Domain
-
-1. Go to your project on the [Vercel Dashboard](https://vercel.com/dashboard)
+1. Go to your project on the your domain provider site
 2. Navigate to "Settings" → "Domains"
 3. Add your domain: `priyanshu.id`
 4. Follow Vercel's instructions to update your DNS settings
@@ -69,7 +47,7 @@ At your domain registrar (where you purchased priyanshu.id):
 
 1. Add an A record:
    - Name: @
-   - Value: 76.76.21.21 (Vercel's IP address)
+   - Value: (Vercel's IP address or Github Pages etc)
 
 2. Add a CNAME record:
    - Name: www
