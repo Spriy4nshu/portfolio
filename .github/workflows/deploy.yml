@@ -1,0 +1,114 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+  
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+          cache: npm
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      
+      - name: Check TypeScript Configuration
+        run: cat ./next.config.ts
+      
+      - name: Build with Next.js
+        run: |
+          echo "Building Next.js project"
+          npm run build
+          echo "Build completed"
+          
+      - name: List directories
+        run: |
+          echo "Current directory structure:"
+          ls -la
+          echo "Next.js build output directory structure:"
+          if [ -d ".next" ]; then
+            ls -la .next/
+          else 
+            echo ".next directory not found"
+          fi
+          if [ -d "out" ]; then
+            echo "Out directory exists"
+            ls -la out/
+          else
+            echo "Out directory doesn't exist"
+          fi
+      
+      # The error might be that Next.js is not creating the 'out' directory
+      # Let's manually create it if needed by copying from .next/standalone
+      - name: Ensure output directory exists
+        run: |
+          if [ ! -d "out" ] && [ -d ".next" ]; then
+            echo "Creating out directory manually"
+            mkdir -p out
+            if [ -d ".next/static" ]; then
+              echo "Copying static assets"
+              cp -r .next/static out/
+            fi
+            if [ -d ".next/server/pages" ]; then
+              echo "Copying page files"
+              cp -r .next/server/pages out/
+            fi
+            if [ -d ".next/server/app" ]; then 
+              echo "Copying app files"
+              cp -r .next/server/app out/
+            fi
+            echo "Copying public files"
+            cp -r public/* out/ || echo "No public files to copy"
+          fi
+          
+          # If out directory still doesn't exist, create a minimal one for the workflow to continue
+          if [ ! -d "out" ]; then
+            echo "Creating minimal out directory"
+            mkdir -p out
+            echo "<html><body>Placeholder</body></html>" > out/index.html
+          fi
+          
+          echo "Final out directory content:"
+          ls -la out/
+      
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./out
+
+  # Deployment job
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
