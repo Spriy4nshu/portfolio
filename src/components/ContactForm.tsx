@@ -123,7 +123,7 @@ export default function ContactForm() {
             </motion.div>
             <h3 className="text-xl font-bold mb-2">Thank you!</h3>
             <p className="text-foreground/80">
-              Your message has been sent successfully. I'll get back to you as soon as possible.
+              Your message has been sent successfully. I&apos;ll get back to you as soon as possible.
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}

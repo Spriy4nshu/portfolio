@@ -5,7 +5,6 @@ import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import NavBar from '@/components/NavBar';
 import AnimatedText from '@/components/AnimatedText';
-import HeroCanvas from '@/components/HeroCanvas';
 import ProjectCard from '@/components/ProjectCard';
 import ContactForm from '@/components/ContactForm';
 import Footer from '@/components/Footer';
@@ -75,12 +74,15 @@ export default function Home() {
       <NavBar />
       
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex flex-col justify-center items-center relative overflow-hidden pt-16">
-        {/* 3D Interactive Animation */}
-        <HeroCanvas />
+      <section id="home" className="min-h-screen flex flex-col justify-center items-center relative overflow-hidden pt-16 bg-gradient-to-br from-background via-background to-background-alt">
+        {/* Background gradient effect */}
+        <div className="absolute inset-0 w-full h-full">
+          <div className="absolute top-20 left-1/4 w-96 h-96 bg-accent/20 rounded-full filter blur-3xl opacity-50 animate-pulse"></div>
+          <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-accent-light/20 rounded-full filter blur-3xl opacity-50 animate-pulse" style={{ animationDelay: '2s' }}></div>
+        </div>
         
-        {/* Text overlay on the animation */}
-        <div className="absolute inset-0 flex flex-col justify-center items-center text-center z-10 px-4">
+        {/* Text content with animation */}
+        <div className="flex flex-col justify-center items-center text-center z-10 px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -88,7 +90,7 @@ export default function Home() {
             className="mb-4"
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4">
-              Hi, I'm <span className="gradient-text">Priyanshu</span>
+              Hi, I&apos;m <span className="gradient-text">Priyanshu</span>
             </h1>
           </motion.div>
           
@@ -122,6 +124,37 @@ export default function Home() {
             </motion.a>
           </motion.div>
         </div>
+        
+        {/* Abstract shapes */}
+        <motion.div 
+          className="absolute w-full h-full pointer-events-none z-0 overflow-hidden"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 1 }}
+        >
+          {[...Array(5)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute bg-accent/10 rounded-full"
+              style={{
+                width: `${100 + i * 50}px`,
+                height: `${100 + i * 50}px`,
+                left: `${10 + i * 15}%`,
+                top: `${20 + i * 10}%`,
+              }}
+              animate={{
+                x: [0, 10, -10, 0],
+                y: [0, -10, 10, 0],
+              }}
+              transition={{
+                repeat: Infinity,
+                duration: 10 - i,
+                ease: "easeInOut",
+                delay: i * 0.2,
+              }}
+            />
+          ))}
+        </motion.div>
         
         {/* Scroll indicator */}
         <motion.div 
@@ -197,7 +230,7 @@ export default function Home() {
                 transition={{ delay: 0.3, duration: 0.5 }}
                 className="text-foreground/80 mb-6"
               >
-                I'm a Software Developer and Machine Learning Engineer based in New Brunswick, NJ. My expertise spans machine learning, computer vision, and full-stack development. At the New Jersey Turnpike Authority, I implement API communication pipelines and work with geographic information systems. Previously, I worked as a Data Engineer at Kaaye Technologies, where I revamped predictive forecast models using Apache Spark.
+                I&apos;m a Software Developer and Machine Learning Engineer based in New Brunswick, NJ. My expertise spans machine learning, computer vision, and full-stack development. At the New Jersey Turnpike Authority, I implement API communication pipelines and work with geographic information systems. Previously, I worked as a Data Engineer at Kaaye Technologies, where I revamped predictive forecast models using Apache Spark.
               </motion.p>
               
               <motion.p
@@ -207,7 +240,7 @@ export default function Home() {
                 transition={{ delay: 0.4, duration: 0.5 }}
                 className="text-foreground/80 mb-8"
               >
-                My research experience includes working as a Research Assistant at Rutgers University, developing classification models for turfgrass species and implementing real-time vehicle speed detection systems. I'm passionate about developing practical AI solutions that bridge theoretical concepts with real-world applications. I've contributed to various ML projects including generative replay models, spiking neural networks, and computer vision systems.
+                My research experience includes working as a Research Assistant at Rutgers University, developing classification models for turfgrass species and implementing real-time vehicle speed detection systems. I&apos;m passionate about developing practical AI solutions that bridge theoretical concepts with real-world applications. I&apos;ve contributed to various ML projects including generative replay models, spiking neural networks, and computer vision systems.
               </motion.p>
               
               <motion.div
