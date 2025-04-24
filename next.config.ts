@@ -1,12 +1,16 @@
 import type { NextConfig } from "next";
 
+// Check if using a custom domain (via CNAME) or the default GitHub Pages domain
+const isCustomDomain = process.env.GITHUB_REPOSITORY 
+  ? false  // When in GitHub Actions, default to GitHub Pages path
+  : true;  // For local development and when using custom domain
+
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   output: 'export',
-  // Configure basePath for GitHub Pages deployment
-  basePath: process.env.NODE_ENV === 'production' ? '/portfolio' : '',
-  // Configure assetPrefix for GitHub Pages deployment
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/portfolio' : '',
+  // Only use basePath and assetPrefix if NOT using a custom domain
+  basePath: isCustomDomain ? '' : '/portfolio',
+  assetPrefix: isCustomDomain ? '' : '/portfolio',
   images: {
     domains: ['priyanshu.id'],
     formats: ['image/webp'],
