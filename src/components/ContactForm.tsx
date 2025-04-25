@@ -41,6 +41,9 @@ export default function ContactForm() {
       }
 
       const data = await response.json();
+      
+      // Use the success message from the server response
+      console.log('Success:', data.message);
 
       // Form submitted successfully
       setIsSubmitted(true);
