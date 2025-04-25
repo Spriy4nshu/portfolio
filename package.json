@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/Spriy4nshu/portfolio",
+  "homepage": "https://priyanshu.id",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
