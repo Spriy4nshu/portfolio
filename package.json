@@ -13,6 +13,7 @@
     "deploy": "gh-pages -d out"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@react-three/drei": "^9.92.7",
     "@react-three/fiber": "^8.15.13",
     "framer-motion": "^12.8.0",

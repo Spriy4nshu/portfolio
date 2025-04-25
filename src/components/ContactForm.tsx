@@ -40,9 +40,8 @@ export default function ContactForm() {
         throw new Error('Failed to send message. Server returned an error.');
       }
 
+      // Parse the JSON response
       const data = await response.json();
-      
-      // Use the success message from the server response
       console.log('Success:', data.message);
 
       // Form submitted successfully

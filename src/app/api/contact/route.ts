@@ -14,15 +14,12 @@ export async function POST(request: Request) {
       );
     }
 
-    // In a real implementation, you'd likely want to:
-    // 1. Send an email using a service like SendGrid, AWS SES, etc.
-    // 2. Store the submission in a database
-    // 3. Add better validation and spam protection
-
-    // For now, we'll just log the submission and return success
+    // Log the submission for debugging purposes
     console.log('Contact form submission:', { name, email, message });
 
-    // Return success response
+    // For now, just return success
+    // In production, you should use a service like EmailJS (client-side) 
+    // or a serverless email service (server-side)
     return NextResponse.json(
       { message: 'Message received! Thank you for reaching out.' },
       { status: 200 }
