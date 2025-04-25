@@ -51,7 +51,7 @@ export default function Home() {
     {
       title: "Car Renting Website - REYOCA",
       description: "Deployed a car rental website on AWS EC2 with authentication, session management, payment processing via Stripe API, and real-time tracking with Maps API.",
-      imageSrc: "/project-portfolio.jpg",
+      imageSrc: "/project-website.jpg",
       technologies: ["Node.js", "MySQL", "AWS", "Maps API", "Stripe API"],
       projectUrl: "https://github.com/Spriy4nshu",
       githubUrl: "https://github.com/Spriy4nshu"
@@ -396,6 +396,24 @@ export default function Home() {
               <h4 className="text-lg text-accent mb-2">Rutgers University, New Brunswick</h4>
               <p className="text-foreground/80">GPA: 3.92/4.0</p>
               <p className="text-foreground/80 mt-2">Research: Developed classification models for turfgrass species, created vehicle speed detection systems using YOLOv7</p>
+              <p className="text-foreground/80 mt-2">Activities and societies: Astronomical Society and Chess Club</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="bg-card-bg rounded-xl p-6 border border-border"
+            >
+              <div className="flex flex-col md:flex-row justify-between mb-2">
+                <h3 className="text-xl font-bold">Bachlor of Engineering in Electronics and Telecommunication</h3>
+                <span className="text-foreground/70">August 2016 - May 2020</span>
+              </div>
+              <h4 className="text-lg text-accent mb-2">Mumbai University, Mumbai, India</h4>
+              <p className="text-foreground/80">GPA: 3.76/4.0</p>
+              <p className="text-foreground/80 mt-2">Robotics Competition 2016: 1st Prize </p>
+              <p className="text-foreground/80 mt-2">Activities and societies: Member of Extension Working Committee</p>
             </motion.div>
           </div>
         </div>
@@ -520,7 +538,7 @@ export default function Home() {
             <p className="text-foreground/70 mb-4">International Journal of Engineering and Advanced Technology (IJEAT), October 2021</p>
             <div className="flex flex-wrap gap-2 mt-4">
               <a 
-                href="https://scholar.google.com" 
+                href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=fK656bEAAAAJ&citation_for_view=fK656bEAAAAJ:d1gkVwhDpl0C" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-4 py-2 bg-accent text-white rounded-full text-sm hover:bg-accent-light transition-colors"

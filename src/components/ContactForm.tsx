@@ -33,11 +33,14 @@ export default function ContactForm() {
         body: JSON.stringify(formData),
       });
 
-      const data = await response.json();
-
+      // Check if response is ok before trying to parse JSON
       if (!response.ok) {
-        throw new Error(data.error || 'Failed to send message');
+        const errorText = await response.text();
+        console.error('Error response:', errorText);
+        throw new Error('Failed to send message. Server returned an error.');
       }
+
+      const data = await response.json();
 
       // Form submitted successfully
       setIsSubmitted(true);
