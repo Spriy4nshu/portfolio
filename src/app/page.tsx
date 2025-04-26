@@ -62,9 +62,9 @@ export default function Home() {
   // Skills data grouped by category from CV
   const skills = {
     languages: ["Python", "R", "MATLAB", "C++", "Java", "JavaScript", "SQL", "NoSQL", "BASH"],
-    machinelearning: ["PyTorch", "TensorFlow", "KERAS", "Computer Vision", "NLP", "LSTM", "SVM"],
-    deeplearning: ["Reinforcement Learning", "StableBaseline-3", "Gymnasium", "Transformers", "Neural Networks"],
-    dataengineering: ["Spark", "Hadoop", "ETL Pipelines", "Docker", "Kubernetes", "AWS"],
+    "Machine Learning": ["PyTorch", "TensorFlow", "KERAS", "Computer Vision", "NLP", "LSTM", "SVM"],
+    "Deep Learning": ["Reinforcement Learning", "StableBaseline-3", "Gymnasium", "Transformers", "Neural Networks"],
+    "Data Engineering": ["Spark", "Hadoop", "ETL Pipelines", "Docker", "Kubernetes", "AWS"],
     frameworks: ["Flask", "Next.js", "React", "Node.js", "Spring Boot", "REST"],
     databases: ["MySQL", "MongoDB", "Firebase", "DynamoDB", "S3"]
   };
@@ -412,7 +412,7 @@ export default function Home() {
               </div>
               <h4 className="text-lg text-accent mb-2">Mumbai University, Mumbai, India</h4>
               <p className="text-foreground/80">GPA: 3.76/4.0</p>
-              <p className="text-foreground/80 mt-2">Robotics Competition 2016: 1st Prize </p>
+              <p className="text-foreground/80 mt-2">Robotics Competition 2016: Winner </p>
               <p className="text-foreground/80 mt-2">Activities and societies: Member of Extension Working Committee</p>
             </motion.div>
           </div>
