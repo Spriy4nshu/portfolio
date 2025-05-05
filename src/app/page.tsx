@@ -45,16 +45,16 @@ export default function Home() {
       description: "Hosted a YOLOv7-based live-streaming web app on AWS using Flask, improving image throughput from 12 to 15 FPS with 25% enhanced detection accuracy.",
       imageSrc: "/project-ecommerce.jpg",
       technologies: ["Python", "YOLOv7", "Flask", "AWS", "FFmpeg"],
-      projectUrl: "https://github.com/Spriy4nshu",
-      githubUrl: "https://github.com/Spriy4nshu"
+      projectUrl: "https://github.com/qm46/yolo-speed-estimation",
+      githubUrl: "https://github.com/qm46/yolo-speed-estimation"
     },
     {
       title: "Car Renting Website - REYOCA",
       description: "Deployed a car rental website on AWS EC2 with authentication, session management, payment processing via Stripe API, and real-time tracking with Maps API.",
       imageSrc: "/project-website.jpg",
       technologies: ["Node.js", "MySQL", "AWS", "Maps API", "Stripe API"],
-      projectUrl: "https://github.com/Spriy4nshu",
-      githubUrl: "https://github.com/Spriy4nshu"
+      projectUrl: "https://github.com/SoftwareG4/REYOCA",
+      githubUrl: "https://github.com/SoftwareG4/REYOCA"
     }
   ];
   

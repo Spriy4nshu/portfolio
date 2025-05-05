@@ -80,17 +80,5 @@ npm run export
 npm run deploy
 ```
 
-Note: Make sure to update the "homepage" field in package.json with your actual GitHub username before deploying.
+Note: Make sure to update the "homepage" field in package.json with your actual GitHub username if using github url or replace with your domain before deploying.
 
-## Customizing Content
-
-To update your portfolio information:
-
-1. Edit project data in `src/app/page.tsx`
-2. Replace placeholder images in `public/` directory
-3. Update your social media links in `src/components/Footer.tsx`
-4. Modify the skills section in `src/app/page.tsx`
-
-## License
-
-MIT
