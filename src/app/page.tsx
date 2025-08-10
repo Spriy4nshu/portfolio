@@ -210,7 +210,7 @@ export default function Home() {
                 src="/profile.jpg" // Add your profile image to public folder
                 alt="Priyanshu"
                 fill
-                className="object-cover"
+                className="object-contain object-center"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </motion.div>
