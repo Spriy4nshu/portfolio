@@ -202,18 +202,15 @@ export default function Home() {
           />
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div 
-              style={{ y: aboutY }}
-              className="relative w-full h-[400px] rounded-2xl overflow-hidden"
-            >
+            <div className="relative w-full h-[400px] rounded-2xl overflow-hidden">
               <Image
                 src="/profile.jpg" // Add your profile image to public folder
                 alt="Priyanshu"
                 fill
-                className="object-cover"
+                className="object-cover object-top"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
-            </motion.div>
+            </div>
             
             <div>
               <AnimatedText 
