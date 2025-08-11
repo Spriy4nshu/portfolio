@@ -24,25 +24,26 @@ export default function ContactForm() {
     setError('');
     
     try {
-      // Send form data to the API endpoint
-      const response = await fetch('/api/contact', {
+      // Use Formspree to send email directly to your email
+      const response = await fetch('https://formspree.io/f/mdkdyyjk', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          _replyto: formData.email,
+          _subject: `New message from ${formData.name} - Portfolio Contact`,
+        }),
       });
 
-      // Check if response is ok before trying to parse JSON
       if (!response.ok) {
-        const errorText = await response.text();
-        console.error('Error response:', errorText);
-        throw new Error('Failed to send message. Server returned an error.');
+        throw new Error('Failed to send message');
       }
 
-      // Parse the JSON response
-      const data = await response.json();
-      console.log('Success:', data.message);
+      console.log('Message sent successfully');
 
       // Form submitted successfully
       setIsSubmitted(true);
@@ -54,7 +55,8 @@ export default function ContactForm() {
         message: '',
       });
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Something went wrong. Please try again later.');
+      console.error('Error sending message:', err);
+      setError('Failed to send message. Please try again later.');
     } finally {
       setIsSubmitting(false);
     }

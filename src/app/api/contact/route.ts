@@ -1,8 +1,9 @@
 import { NextResponse } from 'next/server';
 
+// This endpoint is no longer needed as we're using EmailJS on the client side
+// But keeping it for backwards compatibility
 export async function POST(request: Request) {
   try {
-    // Parse the request body
     const body = await request.json();
     const { name, email, message } = body;
 
@@ -14,14 +15,9 @@ export async function POST(request: Request) {
       );
     }
 
-    // Log the submission for debugging purposes
-    console.log('Contact form submission:', { name, email, message });
-
-    // For now, just return success
-    // In production, you should use a service like EmailJS (client-side) 
-    // or a serverless email service (server-side)
+    // This endpoint is deprecated - the form now uses EmailJS directly
     return NextResponse.json(
-      { message: 'Message received! Thank you for reaching out.' },
+      { message: 'Form submission received, but please use EmailJS integration for sending emails.' },
       { status: 200 }
     );
   } catch (error) {
