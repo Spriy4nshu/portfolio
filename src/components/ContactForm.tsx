@@ -25,7 +25,7 @@ export default function ContactForm() {
     
     try {
       // Use Formspree to send email directly to your email
-      const response = await fetch('https://formspree.io/f/mkgnpjqy', {
+      const response = await fetch('https://formspree.io/f/mdkdyyjk', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
