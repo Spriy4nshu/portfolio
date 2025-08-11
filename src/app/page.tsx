@@ -2,7 +2,7 @@
 
 import { useRef } from 'react';
 import Image from 'next/image';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import NavBar from '@/components/NavBar';
 import AnimatedText from '@/components/AnimatedText';
 import ProjectCard from '@/components/ProjectCard';
@@ -14,13 +14,7 @@ export default function Home() {
   const aboutRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
 
-  // Parallax scroll effects
-  const { scrollYProgress: aboutScrollY } = useScroll({
-    target: aboutRef,
-    offset: ["start end", "end start"]
-  });
   
-  const aboutY = useTransform(aboutScrollY, [0, 1], [50, -50]);
   
   // Real project data from CV
   const projects = [
