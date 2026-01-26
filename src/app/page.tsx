@@ -241,7 +241,7 @@ export default function Home() {
                 transition={{ delay: 0.5, duration: 0.5 }}
               >
                 <a 
-                  href="/resume.pdf" // Add your resume PDF to public folder
+                  href="https://drive.google.com/uc?export=download&id=1jEAoH66LFTO9I14ryxMkBmIneLgbz7zd"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center px-6 py-3 rounded-full border border-border font-medium hover:bg-card-bg transition-colors"
