@@ -428,17 +428,24 @@ export default function Home() {
               className="bg-card-bg rounded-xl p-6 border border-border"
             >
               <div className="flex flex-col md:flex-row justify-between mb-2">
-                <h3 className="text-xl font-bold">Software Developer</h3>
-                <span className="text-foreground/70">July 2024 - Present</span>
+                <h3 className="text-xl font-bold">Software Development Engineer</h3>
+                <span className="text-foreground/70">July 2024 - Ongoing</span>
               </div>
               <h4 className="text-lg text-accent mb-4">New Jersey Turnpike Authority, Woodbridge, NJ</h4>
+              <div className="flex flex-wrap gap-2 mb-4">
+                {["JavaScript", "TypeScript", "Next", "React", "Angular", "GraphQL", "REST", "SOAP", "Postgres SQL", "Git", "Jira"].map((tech, index) => (
+                  <span key={index} className="px-2 py-1 bg-background rounded-md text-xs border border-border">
+                    {tech}
+                  </span>
+                ))}
+              </div>
               <ul className="list-disc pl-5 space-y-2 text-foreground/80">
-                <li>Implemented an API communication pipeline between Enterprise Asset Management System (SOAP) and Fluid Management System (REST) to maintain and manage fluid dispense information at NJTA Depots</li>
-                <li>Created a Linear Referencing System to incorporate new ramps acquired for Garden State Parkway routes by NJTA in enterprise geographic information system using ArcGIS Pro</li>
-                <li>Designed a communication pipeline between Loadrite (Loader Weighing Scale System) and NWOS (NJTA Weather Operation System) to maintain Salt inventory during winter season</li>
+                <li>Developed a web application (FPMS – Fuel Pump Monitoring System) using Next.js and Node.js to display Gasboy station connectivity and transaction data</li>
+                <li>Integrated Loadrite (loader scale system) data—such as salt usage during storm operations—into the NJTA Weather Operations System (NWOS) web app using JavaScript and TypeScript to enable centralized tracking of operational data</li>
+                <li>Integrated the Gasboy web application with the Enterprise Asset Management (EAM) web platform using SOAP API and WSDL to maintain data consistency between applications</li>
               </ul>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -447,17 +454,23 @@ export default function Home() {
               className="bg-card-bg rounded-xl p-6 border border-border"
             >
               <div className="flex flex-col md:flex-row justify-between mb-2">
-                <h3 className="text-xl font-bold">Research Assistant</h3>
-                <span className="text-foreground/70">April 2023 - May 2024</span>
+                <h3 className="text-xl font-bold">Data Engineer</h3>
+                <span className="text-foreground/70">November 2020 - October 2021</span>
               </div>
-              <h4 className="text-lg text-accent mb-4">Plant Biology Department, Rutgers University, New Brunswick, NJ</h4>
+              <h4 className="text-lg text-accent mb-4">Kaaye Technologies LTD, Navi Mumbai, India</h4>
+              <div className="flex flex-wrap gap-2 mb-4">
+                {["Python", "Docker", "Spark", "TensorFlow", "MongoDB", "Tableau"].map((tech, index) => (
+                  <span key={index} className="px-2 py-1 bg-background rounded-md text-xs border border-border">
+                    {tech}
+                  </span>
+                ))}
+              </div>
               <ul className="list-disc pl-5 space-y-2 text-foreground/80">
-                <li>Modelled a VGG-19 classification model for phenotyping 7 different turfgrass species to improve the efficiency and remove a targeted bias of manual phenotyping</li>
-                <li>Generated a Graphical Pedigree dataset for 12 species of turfgrass to obtain a Family link of any plant from any year using a recursive query to maintain dynamism</li>
-                <li>Developed TurfCV, a Python library that takes an image of turfgrass/seed as input and analyzes the physical aspect (phenotype) and predicts (genotype) the future growth of the plant</li>
+                <li>Partnered with clients — Snapdeal and Dunzo (now Zepto) — to analyze over 2 million customer interactions on new feature rollouts using Tableau and SQL, identifying behavioral trends that improved feature engagement by 15%</li>
+                <li>Built and validated predictive models (accuracy ≥ 85%) to forecast user adoption and retention, enabling stakeholders to make data-driven decisions that optimized product portfolio and reduced underperforming features by 20%</li>
               </ul>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -466,13 +479,20 @@ export default function Home() {
               className="bg-card-bg rounded-xl p-6 border border-border"
             >
               <div className="flex flex-col md:flex-row justify-between mb-2">
-                <h3 className="text-xl font-bold">Research Assistant</h3>
-                <span className="text-foreground/70">November 2023 - May 2024</span>
+                <h3 className="text-xl font-bold">Machine Learning Intern</h3>
+                <span className="text-foreground/70">February 2020 - August 2020</span>
               </div>
-              <h4 className="text-lg text-accent mb-4">Durandal Lab, Rutgers University, Piscataway, NJ</h4>
+              <h4 className="text-lg text-accent mb-4">ValueFirst, Gurgaon, India</h4>
+              <div className="flex flex-wrap gap-2 mb-4">
+                {["Python", "PyTorch", "NLTK", "RASA", "PyTesseract", "TensorFlow"].map((tech, index) => (
+                  <span key={index} className="px-2 py-1 bg-background rounded-md text-xs border border-border">
+                    {tech}
+                  </span>
+                ))}
+              </div>
               <ul className="list-disc pl-5 space-y-2 text-foreground/80">
-                <li>Hosted a real-time live streaming web application on AWS EC2 using Flask by collecting frames from the PSDK module of YOLOv7, which resulted in converting them to 15fps video clips using FFmpeg, reducing latency by 20%</li>
-                <li>Improved the efficiency of the number of images produced by the YOLOv7 module by 25%, which resulted in the detection of the speed of the vehicles from 12 images per second to 15 images per second, enhancing detection accuracy by 25%</li>
+                <li>Automated the employee onboarding process, reducing manual intervention by 35–50% through OCR-based document verification and Python scripting, streamlining data extraction and validation workflows</li>
+                <li>Developed and deployed an AI chatbot using RASA, improving customer interaction efficiency and response time by 40%, while enabling end-to-end query handling through natural language understanding models before GPT 3 was released</li>
               </ul>
             </motion.div>
 
@@ -484,13 +504,20 @@ export default function Home() {
               className="bg-card-bg rounded-xl p-6 border border-border"
             >
               <div className="flex flex-col md:flex-row justify-between mb-2">
-                <h3 className="text-xl font-bold">Data Engineer</h3>
-                <span className="text-foreground/70">November 2020 - October 2021</span>
+                <h3 className="text-xl font-bold">Research Assistant</h3>
+                <span className="text-foreground/70">April 2023 - May 2024</span>
               </div>
-              <h4 className="text-lg text-accent mb-4">Kaaye Technologies LTD, Navi Mumbai, India</h4>
+              <h4 className="text-lg text-accent mb-4">Plant Biology Department, New Brunswick, NJ</h4>
+              <div className="flex flex-wrap gap-2 mb-4">
+                {["Python", "PyTorch", "DJI Mavic 3"].map((tech, index) => (
+                  <span key={index} className="px-2 py-1 bg-background rounded-md text-xs border border-border">
+                    {tech}
+                  </span>
+                ))}
+              </div>
               <ul className="list-disc pl-5 space-y-2 text-foreground/80">
-                <li>Revamped predictive forecast and classification models (LSTM, SVM) by leveraging Apache Spark for efficient distributed data processing, which resulted in scalable data storage using MongoDB and reduced processing time by 40%</li>
-                <li>Achieved model accuracies between 85-95% by analyzing historical data to identify past trends, which resulted in providing solutions to 5 retail-based clients, increasing their sales by an average of 15%</li>
+                <li>Modelled a VGG-19 classification model for phenotyping 7 different turfgrass species to improve the efficiency and remove a targeted bias of manual phenotyping</li>
+                <li>Generated a Graphical Pedegree dataset for 12 species of turfgrass to obtain a Family link of any plant from any year using retrieval by recursive queries</li>
               </ul>
             </motion.div>
 
@@ -502,13 +529,20 @@ export default function Home() {
               className="bg-card-bg rounded-xl p-6 border border-border"
             >
               <div className="flex flex-col md:flex-row justify-between mb-2">
-                <h3 className="text-xl font-bold">Machine Learning Intern</h3>
-                <span className="text-foreground/70">February 2020 - August 2020</span>
+                <h3 className="text-xl font-bold">Research Assistant</h3>
+                <span className="text-foreground/70">November 2023 - May 2024</span>
               </div>
-              <h4 className="text-lg text-accent mb-4">ValueFirst, Gurgaon, India</h4>
+              <h4 className="text-lg text-accent mb-4">Durandal Lab, Piscataway, NJ</h4>
+              <div className="flex flex-wrap gap-2 mb-4">
+                {["Python", "PyTorch", "Flask", "AWS", "FFmpeg"].map((tech, index) => (
+                  <span key={index} className="px-2 py-1 bg-background rounded-md text-xs border border-border">
+                    {tech}
+                  </span>
+                ))}
+              </div>
               <ul className="list-disc pl-5 space-y-2 text-foreground/80">
-                <li>Collaborated on an internal project to fully automate the employee onboarding process by reducing manual intervention by 35-50%, which resulted in efficient document verification and information extraction, saving significant time</li>
-                <li>Built a Naive Bayes classifier for email spam detection by achieving 95% accuracy, which resulted in effective spam filtering</li>
+                <li>Implemented a real-time live streaming web application on AWS EC2 using Flask by collecting frames from the PSDK module intrgrated with Yolo object segmentation model</li>
+                <li>Optimized post-detection video processing pipeline, increasing frame rate from 12 FPS to 25 FPS and reducing patchy artifacts, resulting in smoother playback</li>
               </ul>
             </motion.div>
           </div>
