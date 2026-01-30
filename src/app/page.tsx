@@ -23,32 +23,28 @@ export default function Home() {
       description: "Implemented a Hippocampal Memory Indexing module to mimic brain memory storage for NLP tasks, improving task performance by 25% and reducing catastrophic forgetting by 40%.",
       imageSrc: "/project-ai.jpg",
       technologies: ["PyTorch", "BERT", "GPT-2", "LAMOL"],
-      projectUrl: "https://github.com/Spriy4nshu/generative_replay",
-      githubUrl: "https://github.com/Spriy4nshu/generative_replay"
+      projectUrl: "https://github.com/Spriy4nshu/generative_replay"
     },
     {
       title: "Evaluating SpikeNet on Temporal Graphs",
       description: "Benchmarked SpikeNet on a 17M+ edge dynamic graph dataset, achieving 67% accuracy in edge and node property prediction while improving efficiency by 15%.",
       imageSrc: "/project-portfolio.jpg",
       technologies: ["SnnTorch", "Graph Neural Networks", "TGBN"],
-      projectUrl: "https://github.com/Spriy4nshu/tgbn-spikenet",
-      githubUrl: "https://github.com/Spriy4nshu/tgbn-spikenet"
+      projectUrl: "https://github.com/Spriy4nshu/tgbn-spikenet"
     },
     {
       title: "Real-Time Vehicle Speed Detection",
       description: "Hosted a YOLOv7-based live-streaming web app on AWS using Flask, improving image throughput from 12 to 15 FPS with 25% enhanced detection accuracy.",
       imageSrc: "/project-ecommerce.jpg",
       technologies: ["Python", "YOLOv7", "Flask", "AWS", "FFmpeg"],
-      projectUrl: "https://github.com/qm46/yolo-speed-estimation",
-      githubUrl: "https://github.com/qm46/yolo-speed-estimation"
+      projectUrl: "https://github.com/qm46/yolo-speed-estimation"
     },
     {
       title: "Car Renting Website - REYOCA",
       description: "Deployed a car rental website on AWS EC2 with authentication, session management, payment processing via Stripe API, and real-time tracking with Maps API.",
       imageSrc: "/project-website.jpg",
       technologies: ["Node.js", "MySQL", "AWS", "Maps API", "Stripe API"],
-      projectUrl: "https://github.com/SoftwareG4/REYOCA",
-      githubUrl: "https://github.com/SoftwareG4/REYOCA"
+      projectUrl: "https://github.com/SoftwareG4/REYOCA"
     }
   ];
   
