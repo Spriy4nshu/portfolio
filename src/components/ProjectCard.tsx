@@ -11,7 +11,6 @@ interface ProjectCardProps {
   imageSrc: string;
   technologies: string[];
   projectUrl: string;
-  githubUrl?: string;
   index: number;
 }
 
@@ -21,7 +20,6 @@ export default function ProjectCard({
   imageSrc,
   technologies,
   projectUrl,
-  githubUrl,
   index,
 }: ProjectCardProps) {
   const [isHovered, setIsHovered] = useState(false);
@@ -88,36 +86,19 @@ export default function ProjectCard({
         <p className="text-sm text-foreground/80 mb-4 line-clamp-2">
           {description}
         </p>
-        <div className="flex space-x-3">
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <Link
+            href={projectUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 rounded-full bg-accent text-white text-sm font-medium hover:bg-accent-light transition-colors"
           >
-            <Link
-              href={projectUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 rounded-full bg-accent text-white text-sm font-medium hover:bg-accent-light transition-colors"
-            >
-              View Project
-            </Link>
-          </motion.div>
-          {githubUrl && (
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Link
-                href={githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 rounded-full border border-border text-sm font-medium hover:bg-card-bg transition-colors"
-              >
-                GitHub
-              </Link>
-            </motion.div>
-          )}
-        </div>
+            View Project
+          </Link>
+        </motion.div>
       </div>
     </motion.div>
   );
